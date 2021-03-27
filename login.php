@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -76,8 +80,7 @@
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb text-white">
                     <li class="breadcrumb-item"><a href="index.html" class="link-white font-weight-bold">HOME</a></li>
-                    <li class="breadcrumb-item active"><a
-                            class="link-danger font-weight-bold">LOGIN</a></li>
+                    <li class="breadcrumb-item active"><a class="link-danger font-weight-bold">LOGIN</a></li>
                 </ol>
             </nav>
         </div>
@@ -85,67 +88,112 @@
         <div class="container p-5">
             <div class="row pt-3 border">
                 <h3 class="h3-responsive text-white text-center border-bottom">JOIN US TODAY</h3>
+                <div class="alerts px-5">
+                    <!-- Information Toasts -->
+                    <?php if (isset($_SESSION["failureMessage"])): ?>
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <?php
+								echo $_SESSION["failureMessage"];
+								unset($_SESSION["failureMessage"]);
+								?>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <?php endif ?>
+
+                    <?php if (isset($_SESSION["successMessage"])): ?>
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <?php
+								echo $_SESSION["successMessage"];
+								unset($_SESSION["successMessage"]);
+								?>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <?php endif ?>
+                    <!-- Information Toasts -->
+                </div>
                 <div class="col-md border-end">
                     <h4 class="text-center text-white p-2">REGISTER</h3>
-                        <form>
+                        <form method="POST" action="processes/userProcesses.php">
                             <div class="row mb-4">
                                 <div class="col">
                                     <div class="form-outline">
-                                        <input type="text" id="" class="form-control text-white" style="border:none;" />
-                                        <label class="form-label text-white" for="">First name</label>
+                                        <input required type="text" id="firstNameRegister" name="firstName"
+                                            class="form-control text-white" />
+                                        <label class="form-label text-white" for="firstNameRegister">First name</label>
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div class="form-outline">
-                                        <input type="text" id="" class="form-control text-white" />
-                                        <label class="form-label text-white" for="">Last name</label>
+                                        <input required type="text" id="lastNameRegister" name="lastName"
+                                            class="form-control text-white" />
+                                        <label class="form-label text-white" for="lastNameRegister">Last name</label>
                                     </div>
                                 </div>
                             </div>
                             <!-- Username input -->
                             <div class="form-outline mb-4">
-                                <input type="text" id="" class="form-control" />
-                                <label class="form-label text-white" for="">Username</label>
+                                <input required type="text" id="userNameRegister" name="userName"
+                                    class="form-control text-white" />
+                                <label class="form-label text-white" for="userNameRegister">Username</label>
                             </div>
+                            <!--Gender select-->
+                            <div class="form-group py-4">
+                                <label class="text-center text-white">GENDER</label>
+                                <select name="userGender" class="custom-select form-control">
+                                    <option value="male" selected>Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <!--/Gender select-->
                             <!-- Email input -->
                             <div class="form-outline mb-4">
-                                <input type="email" id="" class="form-control" />
-                                <label class="form-label text-white" for="">Email address</label>
+                                <input required type="email" id="emailAddressRegister" name="emailAddress"
+                                    class="form-control text-white" />
+                                <label class="form-label text-white" for="emailAddressRegister">Email address</label>
                             </div>
                             <!-- Date Of Birth -->
                             <div class="form-outline mb-4">
-                                <input type="date" id="" class="form-control text-white" />
+                                <input required type="date" id="dateOfBirthRegister" name="dateOfBirth"
+                                    class="form-control text-white" />
                             </div>
                             <!-- Password input -->
                             <div class="form-outline mb-4">
-                                <input type="password" id="" class="form-control" />
-                                <label class="form-label text-white" for="">Password</label>
+                                <input required type="password" id="passwordRegister" name="password"
+                                    class="form-control text-white" />
+                                <label class="form-label text-white" for="passwordRegister">Password</label>
                             </div>
                             <!-- Confirm Password input -->
                             <div class="form-outline mb-4">
-                                <input type="password" id="" class="form-control" />
-                                <label class="form-label text-white" for="">Confirm Password</label>
+                                <input required type="password" id="confirmPasswordRegister" name="confirmPassword"
+                                    class="form-control text-white" />
+                                <label class="form-label text-white" for="confirmPasswordRegister">Confirm
+                                    Password</label>
                             </div>
                             <!-- Submit button -->
-                            <a type="submit" class="btn btn-outline-light btn-block mb-4">REGISTER</a>
+                            <button type="submit" class="btn btn-outline-light btn-block mb-4" name="signUp">REGISTER</button>
                         </form>
                 </div>
                 <div class="col-md">
                     <h4 class="text-center text-white p-2">LOGIN</h3>
-                        <form>
+                        <form method="POST" action="processes/login&logout.php">
                             <!-- Email input -->
                             <div class="form-outline mb-4">
-                                <input type="email" id="" class="form-control" />
+                                <input required type="email" id="emailAddressLogin" name="emailAddress" class="form-control text-white" />
                                 <label class="form-label text-white" for="">Email address</label>
                             </div>
                             <!-- Password input -->
                             <div class="form-outline mb-4">
-                                <input type="password" id="" class="form-control" />
+                                <input required type="password" id="passwordLogin" name="password" class="form-control text-white" />
                                 <label class="form-label text-white" for="">Password</label>
                             </div>
                             <!-- Submit button -->
-                            <a type="submit" class="btn btn-outline-light btn-block mb-4"
-                                href="admin/index.html">LOGIN</a>
+                            <button type="submit" class="btn btn-outline-light btn-block mb-4"
+                                name="login">LOGIN</button>
                         </form>
                 </div>
             </div>
@@ -228,6 +276,9 @@
         <!-- Footer -->
     </section>
     <!-- Footer Section -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <!-- JAVASCRIPT MDB -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"></script>
 </body>
