@@ -26,6 +26,20 @@
     color: inherit;
 }
 
+.select {
+    border: 1px solid #fff;
+    background: #212529;
+    color: white;
+}
+
+.select option {
+    background: #212529;
+    border: 1px solid #e4e4e4;
+    color: white;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
 /* MEDIA QUERIES */
 
 /* Medium devices (tablets, less than 992px) */

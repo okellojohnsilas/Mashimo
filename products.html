@@ -62,7 +62,7 @@
                         <a class="nav-link" href="#">CONTACT</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page"  href="terms.html">TERMS</a>
+                        <a class="nav-link" aria-current="page" href="terms.html">TERMS</a>
                     </li>
                 </ul>
             </div>
@@ -75,8 +75,7 @@
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb text-white">
                     <li class="breadcrumb-item"><a href="index.html" class="link-white font-weight-bold">HOME</a></li>
-                    <li class="breadcrumb-item active"><a 
-                            class="link-danger font-weight-bold">PRODUCTS</a></li>
+                    <li class="breadcrumb-item active"><a class="link-danger font-weight-bold">PRODUCTS</a></li>
                 </ol>
             </nav>
         </div>
@@ -84,7 +83,7 @@
             <h3 class="text-center text-white h3-responsive fw-bold">OUR PRODUCTS</h3>
             <hr class="hr-bold">
             <div class="form-outline text-white">
-                <input type="search" id="form1" class="form-control text-white" placeholder="Search for products"
+                <input type="search" id="myFilter" class="form-control text-white" placeholder="Search for products" onkeyup="myFunction()"
                     aria-label="Search" />
             </div>
             <!-- Pills navs -->
@@ -106,14 +105,14 @@
             <!-- Pills content -->
             <div class="tab-content border p-2" id="ex2-content">
                 <div class="tab-pane fade show active" id="ex2-pills-1" role="tabpanel" aria-labelledby="ex2-tab-1">
-                    <div class="row row-cols-1 row-cols-md-4 g-4 text-center text-white pt-3 pb-3">
+                    <div class="row row-cols-1 row-cols-md-4 g-4 text-center text-white pt-3 pb-3" id="myProducts">
                         <div class="col">
                             <a href="productDetail.html" class="text-white">
                                 <div class="card bg-dark border h-100 w-100">
                                     <img src="https://mdbootstrap.com/img/new/standard/city/041.jpg"
                                         class="card-img-top" alt="..." />
                                     <div class="card-body border">
-                                        <h5 class="card-title border">Card title</h5>
+                                        <h5 class="card-title border">Card 1</h5>
                                         <p class="card-text">
                                             This is a longer card with supporting text below as a natural
                                             lead-in to
@@ -129,7 +128,7 @@
                                     <img src="https://mdbootstrap.com/img/new/standard/city/042.jpg"
                                         class="card-img-top" alt="..." />
                                     <div class="card-body border">
-                                        <h5 class="card-title border">Card title</h5>
+                                        <h5 class="card-title border">Card 3</h5>
                                         <p class="card-text">
                                             This is a longer card with supporting text below as a natural
                                             lead-in to
@@ -145,7 +144,7 @@
                                     <img src="https://mdbootstrap.com/img/new/standard/city/043.jpg"
                                         class="card-img-top" alt="..." />
                                     <div class="card-body border">
-                                        <h5 class="card-title border">Card title</h5>
+                                        <h5 class="card-title border">Card 4</h5>
                                         <p class="card-text">
                                             This is a longer card with supporting text below as a natural
                                             lead-in to
@@ -161,7 +160,23 @@
                                     <img src="https://mdbootstrap.com/img/new/standard/city/043.jpg"
                                         class="card-img-top" alt="..." />
                                     <div class="card-body border">
-                                        <h5 class="card-title border">Card title</h5>
+                                        <h5 class="card-title border">Card 5</h5>
+                                        <p class="card-text">
+                                            This is a longer card with supporting text below as a natural
+                                            lead-in to
+                                            additional content.
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="productDetail.html" class="text-white">
+                                <div class="card bg-dark border h-100 w-100">
+                                    <img src="https://mdbootstrap.com/img/new/standard/city/043.jpg"
+                                        class="card-img-top" alt="..." />
+                                    <div class="card-body border">
+                                        <h5 class="card-title border">Card 6</h5>
                                         <p class="card-text">
                                             This is a longer card with supporting text below as a natural
                                             lead-in to
@@ -181,7 +196,7 @@
                                     <img src="https://mdbootstrap.com/img/new/standard/city/041.jpg"
                                         class="card-img-top" alt="..." />
                                     <div class="card-body border">
-                                        <h5 class="card-title border">Card title</h5>
+                                        <h5 class="card-title border">Card 7</h5>
                                         <p class="card-text">
                                             This is a longer card with supporting text below as a natural
                                             lead-in to
@@ -391,6 +406,23 @@
     </section>
     <!-- Footer Section -->
     <!-- JAVASCRIPT MDB -->
+    <script>
+        function myFunction() {
+            var input, filter, cards, cardContainer, title, i;
+            input = document.getElementById("myFilter");
+            filter = input.value.toUpperCase();
+            cardContainer = document.getElementById("myProducts");
+            cards = cardContainer.getElementsByClassName("card");
+            for (i = 0; i < cards.length; i++) {
+                title = cards[i].querySelector(".card-title");
+                if (title.innerText.toUpperCase().indexOf(filter) > -1) {
+                    cards[i].style.display = "";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+        }
+    </script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"></script>
 </body>
 

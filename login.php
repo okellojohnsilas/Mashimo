@@ -60,10 +60,10 @@
                         <a class="nav-link active" aria-current="page" href="login.html">LOGIN</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">SERVICES</a>
+                        <a class="nav-link" href="">SERVICES</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">CONTACT</a>
+                        <a class="nav-link" href="">CONTACT</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="terms.html">TERMS</a>
@@ -175,7 +175,8 @@
                                     Password</label>
                             </div>
                             <!-- Submit button -->
-                            <button type="submit" class="btn btn-outline-light btn-block mb-4" name="signUp">REGISTER</button>
+                            <button type="submit" class="btn btn-outline-light btn-block mb-4"
+                                name="signUp">REGISTER</button>
                         </form>
                 </div>
                 <div class="col-md">
@@ -183,12 +184,14 @@
                         <form method="POST" action="processes/login&logout.php">
                             <!-- Email input -->
                             <div class="form-outline mb-4">
-                                <input required type="email" id="emailAddressLogin" name="emailAddress" class="form-control text-white" />
+                                <input required type="email" id="emailAddressLogin" name="emailAddress"
+                                    class="form-control text-white" />
                                 <label class="form-label text-white" for="">Email address</label>
                             </div>
                             <!-- Password input -->
                             <div class="form-outline mb-4">
-                                <input required type="password" id="passwordLogin" name="password" class="form-control text-white" />
+                                <input required type="password" id="passwordLogin" name="password"
+                                    class="form-control text-white" />
                                 <label class="form-label text-white" for="">Password</label>
                             </div>
                             <!-- Submit button -->
@@ -268,7 +271,9 @@
             <!-- Copyright -->
             <div class="text-center p-3 border-top" style="background-color: rgba(0, 0, 0, 0.2);">
                 ©
-                <script>document.write(new Date().getFullYear())</script> Copyright:
+                <script>
+                document.write(new Date().getFullYear())
+                </script> Copyright:
                 <a class="text-white" href="https://mdbootstrap.com/">Mashimo.com</a>
             </div>
             <!-- Copyright -->

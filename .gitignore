@@ -2,3 +2,6 @@ sql/
 processes/
 config/ 
 admin/
+uploaded/
+*.sql
+*.php
