@@ -1,3 +1,4 @@
+DROP DATABASE mashimo;
 -- Creating the database
 CREATE DATABASE IF NOT EXISTS mashimo;
 USE mashimo;
@@ -24,7 +25,6 @@ CREATE TABLE IF NOT EXISTS users(
 CREATE TABLE IF NOT EXISTS productCategories(
   productCategoryId int(17) NOT NULL AUTO_INCREMENT,
   productCategoryName varchar(50) NOT NULL DEFAULT '',
-  productCategoryType text NOT NULL DEFAULT '',
   productCategoryDescription text NOT NULL DEFAULT '',
   productPicture text NOT NULL DEFAULT '',
   productCategoryAvailability text NOT NULL DEFAULT '',
@@ -71,3 +71,15 @@ CREATE VIEW clients AS
 SELECT firstName, lastName, userName, emailAddress, gender, dateOfBirth, accountStatus
 FROM users
 WHERE userType = 'user';
+
+-- View to select active users
+CREATE VIEW activeusers AS
+SELECT firstName, lastName, userName, emailAddress, gender, dateOfBirth, accountStatus
+FROM users
+WHERE accountStatus = 'Active' AND userType != 'admin';
+
+-- View to select active users
+CREATE VIEW inactiveusers AS
+SELECT firstName, lastName, userName, emailAddress, gender, dateOfBirth, accountStatus
+FROM users
+WHERE accountStatus != 'Active'  AND userType != 'admin';
