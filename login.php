@@ -18,6 +18,21 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css" rel="stylesheet" />
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
+    <style>
+    .select {
+        border: 1px solid #fff;
+        background: #212529;
+        color: white;
+    }
+
+    .select option {
+        background: #212529;
+        border: 1px solid #e4e4e4;
+        color: white;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+    }
+    </style>
 </head>
 
 <body class="bg-dark">
@@ -143,7 +158,7 @@
                             <!--Gender select-->
                             <div class="form-group py-4">
                                 <label class="text-center text-white">GENDER</label>
-                                <select name="userGender" class="custom-select form-control">
+                                <select name="userGender" class="custom-select form-control select">
                                     <option value="male" selected>Male</option>
                                     <option value="female">Female</option>
                                     <option value="other">Other</option>

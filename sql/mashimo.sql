@@ -13,6 +13,7 @@ CREATE TABLE IF NOT EXISTS users(
   gender text NOT NULL DEFAULT '',
   dateOfBirth date DEFAULT NULL,
   userPassword text NOT NULL DEFAULT '',
+  temporaryPass NOT NULL DEFAULT '',
   userType varchar(20) NOT NULL DEFAULT '',
   accountStatus text NOT NULL DEFAULT '',
   accountCreated timestamp NOT NULL DEFAULT current_timestamp(),
@@ -74,12 +75,12 @@ WHERE userType = 'user';
 
 -- View to select active users
 CREATE VIEW activeusers AS
-SELECT firstName, lastName, userName, emailAddress, gender, dateOfBirth, accountStatus
+SELECT  userId,firstName, lastName, userName, emailAddress, gender, dateOfBirth, accountStatus, accountLastUpdated  
 FROM users
-WHERE accountStatus = 'Active' AND userType != 'admin';
+WHERE accountStatus = 'active' AND userType != 'admin';
 
 -- View to select active users
 CREATE VIEW inactiveusers AS
-SELECT firstName, lastName, userName, emailAddress, gender, dateOfBirth, accountStatus
+SELECT userId,firstName, lastName, userName, emailAddress, gender, dateOfBirth, accountStatus, accountLastUpdated 
 FROM users
-WHERE accountStatus != 'Active'  AND userType != 'admin';
+WHERE accountStatus != 'active'  AND userType != 'admin';

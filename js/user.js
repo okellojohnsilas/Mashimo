@@ -5,35 +5,23 @@ $(document).ready(function () {
             search: "_INPUT_",
             searchPlaceholder: "Search Users Here..."
         }
-    });
-    // Edit User Modal
-    $('.editUser').on('click', function () {
-        $('#editUserModal').modal('show');
+    }); 
+    // Activate User Modal
+    $('.activateUser').on('click', function () {
+        $('#activateUserModal').modal('show');
         $tr = $(this).closest('tr');
         var data = $tr.children("td").map(function () {
             return $(this).text();
         }).get();
-        // Edit User Title
-        $('#editUserNameTitle').val(data[4]);
-        // console.log(data);
-        $('#userId').val(data[1]);
-        $('#firstName').val(data[2]);
-        $('#lastName').val(data[3]);
-        $('#userName').val(data[4]);
-        $('#emailAddress').val(data[5]);
-        $('#dateOfBirth').val(data[6]);
-        $('#userType').val(data[7]);
+        $('#activateUserId').val(data[1]);
     });
-    $('.deleteUser').on('click', function () {
-        $('#deleteUserModal').modal('show');
+    // Deactivate User Modal
+    $('.deactiveUser').on('click', function () {
+        $('#deactiveUserModal').modal('show');
         $tr = $(this).closest('tr');
         var data = $tr.children("td").map(function () {
             return $(this).text();
         }).get();
-        // Edit User Title
-        $('#deleteUserNameTitle').val(data[4]);
-        // console.log(data);
-        $('#deleteUserId').val(data[1]);
-        $('#userName').val(data[4]);
+        $('#deactiveUserId').val(data[1]);
     });
 });   
