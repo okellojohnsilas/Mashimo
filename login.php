@@ -58,7 +58,7 @@
     <!-- Grid container -->
     <nav class="navbar navbar-expand-md navbar-dark border-bottom">
         <div class="container font-weight-bold">
-            <a class="navbar-brand abs" href="index.html">MASHIMO</a>
+            <a class="navbar-brand abs" href="index.php">MASHIMO</a>
             <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
@@ -66,13 +66,13 @@
             <div class="navbar-collapse collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item ">
-                        <a class="nav-link" href="index.html">HOME</a>
+                        <a class="nav-link" href="index.php">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="products.html">PRODUCTS</a>
+                        <a class="nav-link" href="products.php">PRODUCTS</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link active" aria-current="page" href="login.html">LOGIN</a>
+                        <a class="nav-link active" aria-current="page" href="login.php">LOGIN</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="">SERVICES</a>
@@ -94,7 +94,7 @@
         <div class="container border-bottom">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb text-white">
-                    <li class="breadcrumb-item"><a href="index.html" class="link-white font-weight-bold">HOME</a></li>
+                    <li class="breadcrumb-item"><a href="index.php" class="link-white font-weight-bold">HOME</a></li>
                     <li class="breadcrumb-item active"><a class="link-danger font-weight-bold">LOGIN</a></li>
                 </ol>
             </nav>
