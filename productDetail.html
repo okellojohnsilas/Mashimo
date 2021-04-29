@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css" rel="stylesheet" />
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Medium devices (tablets, less than 992px) */
+        
+        @media (max-width: 991.98px) {
+            html {
+                font-size: small;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <!-- Grid container -->
+    <div class="bg-dark container-fluid text-center border-bottom">
+        <!-- Section: Social media -->
+        <section class="p-2">
+            <!-- Facebook -->
+            <a class="btn btn-outline-light btn-floating m-1" href="" role="button"><i
+                    class="fab fa-facebook-f"></i></a>
+            <!-- Twitter -->
+            <a class="btn btn-outline-light btn-floating m-1" href="" role="button"><i class="fab fa-twitter"></i></a>
+            <!-- Google -->
+            <a class="btn btn-outline-light btn-floating m-1" href="" role="button"><i class="fab fa-google"></i></a>
+            <!-- Instagram -->
+            <a class="btn btn-outline-light btn-floating m-1" href="" role="button"><i class="fab fa-instagram"></i></a>
+            <!-- Whatsapp -->
+            <a class="btn btn-outline-light btn-floating m-1" href="" role="button"><i class="fab fa-whatsapp"></i></a>
+        </section>
+        <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark border-bottom">
+        <div class="container font-weight-bold">
+            <a class="navbar-brand abs" href="index.html">MASHIMO</a>
+            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="navbar-collapse collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="index.html">HOME</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link active" aria-current="page" href="products.html">PRODUCTS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="terms.html">TERMS</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navigation Bar -->
+    <!-- Product Details Section -->
+    <section class="product-details bg-dark">
+        <div class="container p-4">
+            <div class="card bg-dark text-white border-top border-start border-end">
+                <div class="card-header border-bottom">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb text-white">
+                            <li class="breadcrumb-item"><a href="index.html" class="link-white font-weight-bold">HOME</a>
+                            </li>
+                            <li class="breadcrumb-item">
+                                <a href="products.html" class="link-white font-weight-bold text-uppercase">
+                                    <?php echo $displayProduct['productCategoryName']?>
+                                </a>
+                            </li>
+                            <li class="breadcrumb-item active">
+                                <a class="link-danger text-uppercase font-weight-bold">
+                                    <?php echo $displayProduct['productName']?>
+                                </a>
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="card-body p-3">
+                    <div class="row">
+                        <div class="col-8 border-end">
+                            <img src="uploaded/img/Categories/<?php echo $displayProduct['productCategoryName']." /Products/ ".$displayProduct['productName']."/ ".$displayProduct['productPicture'];?>" class="img-thumbnail w-100" alt="<?php echo $displayProduct['productName']?>"
+                            />
+                        </div>
+                        <div class="col-4">
+                            <h5 class="h5-responsive">
+                                <?php echo $displayProduct['productName']?>
+                            </h5>
+                            <hr class="hr-light">
+                            <h6>Category: <span class="link-danger"><?php echo $displayProduct['productCategoryName']?></span></h6>
+                            <?php
+                            //Check if there is a discount 
+                            $storedDiscountRate = (float)$displayProduct['discountRate'];
+                            $storedProductPrice = (float)$displayProduct['productPrice'];
+                            if($storedDiscountRate>1){
+                              // Calculating the discount
+                                (int)$displayedPrice = ((100-$storedDiscountRate)/100)*$storedProductPrice;?>
+                                <h2 class="h2-responsive fw-bold">Ksh
+                                    <?php echo $displayedPrice?>
+                                </h2>
+                                <h4 class="h4-responsive"><s class="text-danger">Ksh <?php echo $storedProductPrice;?></s>
+                                    <span class="btn btn-sm btn-secondary fw-bold" disabled>-<?php echo $storedDiscountRate;?>%</span>
+                                </h4>
+                                <?php }else{//If there is no disount?>
+                                <h2 class="h2-responsive fw-bold">Ksh
+                                    <?php echo $displayProduct['productPrice']?>
+                                </h2>
+                                <?php }?>
+                                <a class="btn btn-outline-light btn-sm w-100" type="button" href="https://wa.me/254708729886?text=I%20am%20interested%20in%20buying%20the%20<?php echo $displayProduct['productName']?>" style="text-decoration: none;" target="_blank"><i class="fas fa-cart-plus"></i>
+                                ORDER
+                                NOW</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card bg-dark text-white p-3 border">
+                <div class="card-header border-bottom">
+                    <h5>Product Description</h5>
+                </div>
+                <div class="card-body">
+                    <p class="text-justify">
+                        <?php echo $displayProduct['productDescription']?>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Product Details Section -->
+    <!-- Footer Section -->
+    <section class="border-top">
+        <!-- Footer -->
+        <footer class="bg-dark text-white text-center text-md-start">
+            <!-- Grid container -->
+            <div class="container p-4">
+                <!--Grid row-->
+                <div class="row">
+                    <!--Grid column-->
+                    <div class="col-lg-6 col-md-12 mb-4 mb-md-0 border-start">
+                        <h5 class="text-uppercase">MASHIMO</h5>
+                        <hr class="hr-light">
+                        <p>We are Mashimo, your one stop shop for the best household electronic items.</p>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0 border-start">
+                        <h5 class="text-uppercase">Quick Links</h5>
+                        <hr>
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="index.html" class="text-white">HOME</a>
+                            </li>
+                            <li>
+                                <a href="products.html" class="text-white">PRODUCTS</a>
+                            </li>
+                            <li>
+                                <a href="terms.html" class="text-white">TERMS</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+                </div>
+                <!--Grid row-->
+            </div>
+            <!-- Grid container -->
+
+            <!-- Grid container -->
+            <div class="container text-center p-2 pb-0 border-top">
+                <!-- Section: Social media -->
+                <section class="mb-4">
+                    <!-- Facebook -->
+                    <a class="btn btn-outline-light btn-floating m-1" href="" role="button"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <!-- Twitter -->
+                    <a class="btn btn-outline-light btn-floating m-1" href="" role="button"><i
+                            class="fab fa-twitter"></i></a>
+                    <!-- Google -->
+                    <a class="btn btn-outline-light btn-floating m-1" href="" role="button"><i
+                            class="fab fa-google"></i></a>
+                    <!-- Instagram -->
+                    <a class="btn btn-outline-light btn-floating m-1" href="" role="button"><i
+                            class="fab fa-instagram"></i></a>
+                    <!-- Whatsapp -->
+                    <a class="btn btn-outline-light btn-floating m-1" href="" role="button"><i
+                            class="fab fa-whatsapp"></i></a>
+                </section>
+                <!-- Section: Social media -->
+            </div>
+            <!-- Grid container -->
+
+            <!-- Copyright -->
+            <div class="text-center p-3 border-top" style="background-color: rgba(0, 0, 0, 0.2);">
+                ©
+                <script>
+                    document.write(new Date().getFullYear())
+                </script> Copyright:
+                <a class="text-white" href="https://mdbootstrap.com/">Mashimo.com</a>
+            </div>
+            <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
+    </section>
+    <!-- Footer Section -->
+    <!-- JAVASCRIPT MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"></script>
+</body>
+
+</html>
