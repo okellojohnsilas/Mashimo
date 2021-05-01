@@ -14,6 +14,23 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css" rel="stylesheet" />
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <style>
+        #services-img {
+            height: 20rem;
+        }
+        /* Small devices (landscape phones, 576px and up) */
+        
+        @media (max-width: 576px) {
+            header {
+                display: none;
+            }
+        }
+    </style>
+    <!-- <script src="//code.jquery.com/jquery-1.11.1.min.js"></script> -->
 </head>
 
 <body>
@@ -69,7 +86,7 @@
             <header class="pb-3">
                 <!-- Services image -->
                 <div class="p-5 text-center bg-image border" style="background-image: url('https://images.unsplash.com/photo-1436918898788-ebce04d38e46?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXwzMzYyMDU5fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60'); height: 400px;">
-                    <div class="mask" style="background-color: rgba(0, 0, 0, 0.5);">
+                    <div class="mask" style="background-color: rgba(0, 0, 0, 0.8);">
                         <div class="d-flex justify-content-center align-items-center h-100">
                             <div class="text-white p-5">
                                 <h1 class="mb-3 border-bottom border-top">MASHIMO SERVICES</h1>
@@ -81,27 +98,32 @@
                 <!-- Services image -->
             </header>
             <!-- Services -->
-            <div class=" row row-cols-1 row-cols-md-2 g-4 ">
-                <div class="col ">
+            <!-- Services Search -->
+            <div class="input-group py-3 rounded">
+                <input type="search" class="form-control rounded bg-transparent text-white" id="myFilter" onkeyup="searchCardTitle()" placeholder="Search Services" />
+            </div>
+            <!-- Services Search -->
+            <div class="row row-cols-1 row-cols-md-3 g-4" id="mashimo-services">
+                <div class="col">
                     <!-- Netflix -->
                     <div class="card card-dark border ">
-                        <img src="https://images.pexels.com/photos/987586/pexels-photo-987586.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="card-img-top img-thumbnail border " alt=" " />
+                        <img src="https://images.pexels.com/photos/987586/pexels-photo-987586.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="card-img-top img-thumbnail border" id="services-img" alt=" " />
                         <div class="card-body ">
                             <h5 class="card-title border text-white ">NETFLIX</h5>
-                            <p class="card-text text-white text-justify">
-                                Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices. We offer a proper package thatt suits your needs
+                            <p class="card-text text-white text-justify ">
+                                Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.
                             </p>
-                            <a href="https://wa.me/254708729886?text=I%20am%20interested%20in%20buying%20the%20netflix%20package" class="btn btn-block btn-outline-light">ORDER NOW</a>
+                            <a href="https://wa.me/254708729886?text=I%20am%20interested%20in%20buying%20the%20netflix%20package " class="btn btn-block btn-outline-light ">ORDER NOW</a>
                         </div>
                     </div>
                     <!-- Netflix -->
                 </div>
-                <div class="col ">
+                <div class="col">
                     <!-- Grammarly -->
-                    <div class="card card-dark border ">
-                        <img src="https://bigdata-madesimple.com/wp-content/uploads/2018/12/Grammarly.jpg" class="card-img-top img-thumbnail border " alt=" " />
-                        <div class="card-body ">
-                            <h5 class="card-title border text-white ">GRAMMARLY</h5>
+                    <div class="card card-dark border">
+                        <img src="https://bigdata-madesimple.com/wp-content/uploads/2018/12/Grammarly.jpg " class="card-img-top img-thumbnail border" id="services-img" alt=" " />
+                        <div class="card-body">
+                            <h5 class="card-title border text-white">GRAMMARLY</h5>
                             <p class="card-text text-white text-justify">
                                 Millions trust Grammarly’s writing app to make their online writing clear and effective.It is a writing tool that helps you check for several types of errors.With as low as $3 you get a premium Grammarly account
                             </p>
@@ -110,71 +132,286 @@
                     </div>
                     <!-- Grammarly -->
                 </div>
-                <div class="col ">
+                <div class="col">
                     <!-- Upwork -->
                     <div class="card card-dark border ">
-                        <img src="https://www.upwork.com/static/images/upwork-fb.png" class="card-img-top img-thumbnail border " alt=" " />
+                        <img src="https://www.upwork.com/static/images/upwork-fb.png " class="card-img-top img-thumbnail border" id="services-img" alt=" " />
                         <div class="card-body ">
-                            <h5 class="card-title border text-white ">UPWORK</h5>
-                            <p class="card-text text-white text-justify">
-                                Upwork is one of the leading online work place. We offer new and approved Upwork accounts at an affordable price. Getting a productive account all by yourself can be complicated but that's why mashimo is here
+                            <h5 class="card-title border text-white ">UPWORK ACCOUNTS</h5>
+                            <p class="card-text text-white text-justify ">
+                                Upwork is one of the leading online work place. We offer new and approved Upwork accounts at an affordable price. Getting a productive account all by yourself can be complicated.
                             </p>
-                            <a href="https://wa.me/254708729886?text=I%20am%20interested%20in%20buying%20the%20upwork%20package" class="btn btn-block btn-outline-light">ORDER NOW</a>
+                            <a href="https://wa.me/254708729886?text=I%20am%20interested%20in%20buying%20the%20upwork%20package " class="btn btn-block btn-outline-light ">ORDER NOW</a>
                         </div>
                     </div>
                     <!-- Upwork -->
                 </div>
-                <div class="col ">
+                <div class="col">
                     <!-- Nord Vpn -->
                     <div class="card card-dark border ">
-                        <img src="https://images.unsplash.com/photo-1603985529862-9e12198c9a60?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1342&q=80" class="card-img-top img-thumbnail border " alt=" " />
+                        <img src="https://images.unsplash.com/photo-1603985529862-9e12198c9a60?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1342&q=80" class="card-img-top img-thumbnail border" id="services-img" alt=" " />
                         <div class="card-body ">
-                            <h5 class="card-title border text-white text-uppercase">Nord and Tunnel Bear VPN Logins</h5>
-                            <p class="card-text text-white text-justify">
-                                NordVPN offers dedicated IP addresses and has advanced leak protection, whereas TunnelBear only offers shared IPs. If you are squeezed by your budget, yet in need of the subscriptions we are here for you.
+                            <h5 class="card-title border text-white text-uppercase ">Nord and Tunnel Bear VPN Logins
+                            </h5>
+                            <p class="card-text text-white text-justify ">
+                                NordVPN offers dedicated IP addresses and has advanced leak protection, whereas TunnelBear only offers shared IPs. If you are squeezed by your budget, yet in need of the subscriptions.
                             </p>
-                            <a href="https://wa.me/254708729886?text=I%20am%20interested%20in%20buying%20the%20vpn%20package" class="btn btn-block btn-outline-light">ORDER NOW</a>
+                            <a href="https://wa.me/254708729886?text=I%20am%20interested%20in%20buying%20the%20vpn%20package " class="btn btn-block btn-outline-light ">ORDER NOW</a>
                         </div>
                     </div>
                     <!-- Nord Vpn -->
+                </div>
+                <div class="col">
+                    <!-- BULK SMS-->
+                    <div class="card card-dark border ">
+                        <img src="data:image/jpeg;base64,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"
+                            class="card-img-top img-thumbnail border" id="services-img" alt=" " />
+                        <div class="card-body ">
+                            <h5 class="card-title border text-white text-uppercase ">BULK SMS
+                            </h5>
+                            <p class="card-text text-white text-justify ">
+                                In any kind of business you need to reach more prospects. Just a click on your keyboard you can now send a SMS text message to thousands of your potential clients.
+                            </p>
+                            <a href="https://wa.me/254708729886?text=I%20am%20interested%20in%20buying%20the%20Bulk SMS%20package " class="btn btn-block btn-outline-light ">ORDER NOW</a>
+                        </div>
+                    </div>
+                    <!-- BULK SMS -->
+                </div>
+                <div class="col">
+                    <!-- CHEGG -->
+                    <div class="card card-dark border">
+                        <img src="data:image/png;base64,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"
+                            class=" card-img-top img-thumbnail border" id="services-img" alt=" " />
+                        <div class="card-body ">
+                            <h5 class="card-title border text-white text-uppercase ">Chegg Unlocks</h5>
+                            <p class="card-text text-white text-justify ">
+                                Everything is figureoutable with Chegg. Chegg offers you with Textbook Solutions, Expert Q&A, Video Explanations and Practice Problems. We offer you Chegg unlocks at a discounted price.
+                            </p>
+                            <a href="https://wa.me/254708729886?text=I%20am%20interested%20in%20buying%20the%Chegg Unlocks%20package " class="btn btn-block btn-outline-light ">ORDER NOW</a>
+                        </div>
+                    </div>
+                    <!-- CHEGG -->
+                </div>
+                <div class="col">
+                    <!-- Plagiarism Removal Services -->
+                    <div class="card card-dark border ">
+                        <img src="https://5.imimg.com/data5/SELLER/Default/2021/4/IH/LJ/VE/4371101/capture-jpg-500x500.JPG " class="card-img-top img-thumbnail border" id="services-img" alt=" " />
+                        <div class="card-body ">
+                            <h5 class="card-title border text-white text-uppercase ">Plagiarism Removal Services</h5>
+                            <p class="card-text text-white text-justify ">
+                                Get advanced plagiarism removal services. With our paraphrasing tools ,we change the sentences and remain with the same best meaning. Whatever the level,you do not have to worry about plagiarism.
+                            </p>
+                            <a href="https://wa.me/254708729886?text=I%20am%20interested%20in%20buying%20the%Plagiarism Removal Services%20package " class="btn btn-block btn-outline-light ">ORDER NOW</a>
+                        </div>
+                    </div>
+                    <!-- Plagiarism Removal Services -->
+                </div>
+                <div class="col">
+                    <!-- Rev and Verbit -->
+                    <div class="card card-dark border ">
+                        <img src="https://www.rev.com/blog/wp-content/uploads/2019/02/Rev-revVSTranscribeme.gif" class="card-img-top img-thumbnail border" id="services-img" alt=" " />
+                        <div class="card-body ">
+                            <h5 class="card-title border text-white text-uppercase ">Rev and Verbit</h5>
+                            <p class="card-text text-white text-justify ">
+                                Do you need a perfect tool to professionally transcribe all English audio to text. Rev and Verbit are the very solution whatever audio you have and also earn through transcription tasks.
+                            </p>
+                            <a href="https://wa.me/254708729886?text=I%20am%20interested%20in%20buying%20the%20Rev and Verbit%20package " class="btn btn-block btn-outline-light ">ORDER NOW</a>
+                        </div>
+                    </div>
+                    <!-- Rev and Verbit -->
+                </div>
+                <div class="col">
+                    <!-- EBSCOhost -->
+                    <div class="card card-dark border ">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASsAAACoCAMAAACPKThEAAAAw1BMVEX///+dn6AFUJAfpkoATI4ARIoAP4gASIwAQokATo8APYfg6fEAR4wAQ4pEc6SgoqPZ4+wAoToAoDcAOIWuwNWe06wOo0Lv8/fAzt7o7/Xs9+/K59IANIMAOYWmudD7/vzN2ORujrSDx5Vwc3az3L7f8eROtGvW7Nxaf6tsvoKw27stY5u2xth4lrmOpsQZWpYALoG/4sgAmRoAnClhha9cuXaWz6U4rlt2woonqVA9baArYZqFn79AsGGbsMkAlg4AG3uHkvhSAAAH5UlEQVR4nO2c2XbiOBBAFcU7ZjEBm7UxZAEctoQtgU56/v+rRpKNMYHOqYcxUubUfUgwCd3le0plWS6F3JdvEAjle1ImCIwyuZEdwo/hBl2BQVdw0BUcdAUHXcFBV3DQFRx0BQddwUFXcNAVHHQFB13BQVdw0BUcdAUHXcFBV3DQFRx0BQddwUFXcNAVHHQFB13BQVdw0BUcdAUHXcFBV3DQFRx0BQddwUFXcNAVHHQFB13BQVdw0BUcdAUHXcFBV3DQFRx0BQddwVHRVav9EtUf2o+y4/iKcq7ab7dVz/N8z6t663pLdjhZFHNVf/f82xQmbDyUHdIRpVw9+N7tF/zquCc7rAMKueqtq19NCVt+W3ZkCeq4ar37l1QxqnXZscUo4+rR/5sqJmsjOzqBKq5afzeljCxVXG2/ceVXt28qFHhFXA3OLoAZUXVFZqVquBpevALyCdb7JhFVkxshRw1XTxdHoF9dvyS/UKOditQIOUq4uphWfnVwGHvhs2WbfakhcpRwNT5PK98bHO4Fg76jUWoXA6kxEjVc9c7vbLy39K554pqUo/+SGSNHBVftr66qT+mVLxgZNEYbyYyRo4KrzekQ9P2H9EeHpOKYEkMUqOBqfeIqu7DQd+gRpykxRo4KrrZZVd4xqQpzN6OKWqG8EAUKuOq9Z8bf9rgSOrG0rCpabEgMkqOCq8z4ezu+/duxT1RRXfbUXSlX2YWqkUW/UJzIi1GggKu0XlWPpYrs3K+qqIVjML0brB7XioO9eaaKGrLvCFVwNRCuvIwqqp2roobEEAUquIq8L1k1v6TKfpYYokAFV63qaa3aX1JFzd/yIoxRwRX5uPUyV8DShVrFh2AoLb4EJVxF1fHxYFq8qEr+EFTDVe/9eAs4MS6qopbsmagirshRVfN8XiXQ5hLDS1DD1ZHRxbpOqRPKjkw5V42/jEB9Kjsyopwral9UZe5kB8ZRy1Xt7IY5KVbSn0tw1HL1fDGtTDVUqeUqvFitDOkPJRKUcjXrnueVKf9Z1wGlXJEatbSsLtt0pmqMP45arti0vaRbrqZptq2ZujWfqWNKPVeEBI3Zave835WmvwqyYzlFPVfqgq7goCs46AoOuoKDruCgKzjoCg66goOu4CjgqnnSrxc0g+9+LJOcXdXuNLGuuadF060RshCPadhNcT9pEApHHb3Tmf+OBRWm7kJ3Fs+z5E4w+JwvLGOxS5dlem2Ju3pzdhUURibVP9mrQr+7YkkyMW3bCJu/DItyH7POrkCafetO9AtNne6UZVG4cxzxQH5iOrsKIY25Mw/jf2/45//rip24dWjIm3b515JGNfbt0+RP/MI7SyRUv8tdlYrWZ/yhldlh7386Zik+nmtOnIeRl2+035K7q4qRNi+K02WubCIUGgXSN6n4ScDzqq9r6eMaesfSyaGHvRKhQx0xLAdP3/1fj/luYL2mK0GSV+xtp8kOkhXiQCy262nn3meHJZOtpXtwdrYmUuzj202XT4P/NPSvXM1VfxUfJ3lV090R4XllHRaJ2evMlpuQTNjgTTtEZ65o6+t57d7DJkoe6b9sNnHTVi/aRC0ybPuD9gvJj6u4Yqdc0ZMcKWm2y9vRLJ4nYcemptUXzY1z295nP8jcGenCaKMorhCPy6g6jj58LmvoP0Wb6pq9annraB2RaOy9DfLMrGu4svVu985MXVGbPt/ZcRWvGezQ7K4CEhhUK2U/ONKokeYZK2/mlGWS5w1ZGvHGtsdXXpxaS/Z1nXQktZf5nso1XLmzSmVqHF3pjXDmFp9FNlVKfMObS4PAOXdlpa4asavNUvwZEF61tnEr/GBLyG0U/1L9Pd9TuVq9mp/Wq4qlOXFfcVgy2EAcEVbzT9rRVlpmBw53NWMZtBZHtw+k/RpPtB68Hhlv419av5FcuZqrz6TdM3HFylE6QwjZqHRYHtknO7l+6ZmOdnbAeyB9UbpbLLsGH/EPIla7eltfpNshv/LiqnMGnibJnIGdve0G/VC8H7DLYTAxsi2h00qgi1SKYSLZ1LX1KvYVtpe9dHrwJiZcg+VjrDBXrumq8Q855tXMpFrTSloVpqbB5lCatjp8qrEIycyyaXLICj+fuLerYrZQ3x6nUsm2lA82/NqvOf8Rhyu6CkQf4yGvdhqrUXaSSSudlfXA1Zxk0AW0y4rZSHeTgTvSDN6stokH3phd9wZxHd94sZ83Vsii23zPJH9XLH/izvRwzuQwC5QabCzOLNcOyNykIeF3M0U+k2ruLUNM40PqiDLfdxw+Cnt9Q3wn47h4v7NcGr7yhvjotS2aTXtLVqo223zPJG9XE6tjGEZH21Nr4XSmxLxz2HF3XlxofL5em991dv3dopRMOj/nC3fU3y/2ySJMWFq4q5GxGMWXzKUo3r0/fLYevY7rT3yzxXA52Ii9dO3XwY++HwwKWQJSObw8zAaCsFZrZFbzCo1aLcys9gXZ40cx4Hrxt1ZUj29oHh+ieCv5MMr3L2UpsC76Y0BXcNAVHHQFB13BQVdw0BUcdAUHXcFBV3DQFRx0BQddwUFXcNAVHHQFB13BQVdw0BUcdAUHXcFBV3DQFRx0BQddwUFXcNAVHHQFB13BQVdw0BUcdAUHXcFBV3DQFRx0BQddwUFXcNAVHHQFB13BQVdw0BUcdAUHXcFBV3DQFRx0BQddwbkhZdkh/BjK5L58g0Ao3/8LqiiFWWOHozkAAAAASUVORK5CYII="
+                            class="card-img-top img-thumbnail border" id="services-img" alt=" " />
+                        <div class="card-body ">
+                            <h5 class="card-title border text-white text-uppercase ">EBSCOhost</h5>
+                            <p class="card-text text-white text-justify ">
+                                EBSCOhost is an intuitive online research platform used by thousands of institutions and millions of users worldwide. With EBSCOhost,you get all kind of information you need as a researcher
+                            </p>
+                            <a href="https://wa.me/254708729886?text=I%20am%20interested%20in%20buying%20the%20EBSCOhost%20package " class="btn btn-block btn-outline-light ">ORDER NOW</a>
+                        </div>
+                    </div>
+                    <!-- EBSCOhost -->
+                </div>
+                <div class="col">
+                    <!-- Turn It In -->
+                    <div class="card card-dark border ">
+                        <img src="https://www.turnitin.com/img/themes/turnitin/img/default-turnitin-image.png?s=ea83de6244b33b609b2c7232765c38b3" class="card-img-top img-thumbnail border" id="services-img" alt=" " />
+                        <div class="card-body ">
+                            <h5 class="card-title border text-white text-uppercase ">Turn It In</h5>
+                            <p class="card-text text-white text-justify ">
+                                In any kind of business you need to reach more prospects. Just a click on your keyboard you can now send a SMS text message to thousands of your potential clients.
+                            </p>
+                            <a href="https://wa.me/254708729886?text=I%20am%20interested%20in%20buying%20the%20Bulk SMS%20package " class="btn btn-block btn-outline-light ">ORDER NOW</a>
+                        </div>
+                    </div>
+                    <!-- Turn It In -->
+                </div>
+                <div class="col">
+                    <!-- Writing services -->
+                    <div class="card card-dark border ">
+                        <img src="https://images.pexels.com/photos/955389/pexels-photo-955389.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="card-img-top img-thumbnail border" id="services-img" alt=" " />
+                        <div class="card-body ">
+                            <h5 class="card-title border text-white text-uppercase ">Writing services</h5>
+                            <p class="card-text text-white text-justify ">
+                                We offer writing services. Ranging from masters, PhD, Thesis, Proposals to Dissertation writing services. We have experienced writers. When it comes to writing you can count on us, we surely render quality.
+                            </p>
+                            <a href="https://wa.me/254708729886?text=I%20am%20interested%20in%20buying%20the%20Writing services%20package " class="btn btn-block btn-outline-light ">ORDER NOW</a>
+                        </div>
+                    </div>
+                    <!-- Writing services -->
+                </div>
+                <div class="col">
+                    <!-- Course Hero Logins -->
+                    <div class="card card-dark border ">
+                        <img src="data:image/png;base64,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"
+                            class="card-img-top img-thumbnail border" id="services-img" alt=" " />
+                        <div class="card-body ">
+                            <h5 class="card-title border text-white text-uppercase ">Course Hero Logins</h5>
+                            <p class="card-text text-white text-justify ">
+                                Want to earn from online writing? We are here to equip you with the necessary and legitimate tools to help you earn online. With course hero you are able to access writing resources easily i.e expert tutors,explanations and answers.
+                            </p>
+                            <a href="https://wa.me/254708729886?text=I%20am%20interested%20in%20buying%20the%20Course Hero Logins%20package " class="btn btn-block btn-outline-light ">ORDER NOW</a>
+                        </div>
+                    </div>
+                    <!-- Course Hero Logins -->
+                </div>
+                <div class="col">
+                    <!-- PayPal Verification Documents -->
+                    <div class="card card-dark border ">
+                        <img src="https://urbankenyans.com/wp-content/uploads/2020/08/PayPal-Kenya.jpg" class="card-img-top img-thumbnail border" id="services-img" alt=" " />
+                        <div class="card-body ">
+                            <h5 class="card-title border text-white text-uppercase ">PayPal Verification Documents</h5>
+                            <p class="card-text text-white text-justify ">
+                                You need to get your identity approved for a PayPal account so as to transact huge money. We get everything ready for you so that you can start receiving your payments as soon as possible.
+                            </p>
+                            <a href="https://wa.me/254708729886?text=I%20am%20interested%20in%20buying%20the%20PayPal Verification Documents%20package " class="btn btn-block btn-outline-light ">ORDER NOW</a>
+                        </div>
+                    </div>
+                    <!-- PayPal Verification Documents -->
+                </div>
+                <div class="col">
+                    <!-- Quillbot paraphrasing tool -->
+                    <div class="card card-dark border ">
+                        <img src="https://quillbot.com/images/og_quillbot.png" class="card-img-top img-thumbnail border" id="services-img" alt=" " />
+                        <div class="card-body ">
+                            <h5 class="card-title border text-white text-uppercase ">Quillbot paraphrasing tool</h5>
+                            <p class="card-text text-white text-justify ">
+                                Millions trust QuillBot’s full-sentence thesaurus to get creative suggestions, rewrite content, and get over writer’s block. We offer the tool at $50 per year or $30 for six months. Ease writing with Quillbot.
+                            </p>
+                            <a href="https://wa.me/254708729886?text=I%20am%20interested%20in%20buying%20the%20Quillbot paraphrasing tool%20package " class="btn btn-block btn-outline-light ">ORDER NOW</a>
+                        </div>
+                    </div>
+                    <!-- Quillbot paraphrasing tool -->
+                </div>
+                <div class="col ">
+                    <!-- Assignment help services -->
+                    <div class="card card-dark border ">
+                        <img src="https://images.pexels.com/photos/5905848/pexels-photo-5905848.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="card-img-top img-thumbnail border" id="services-img" alt=" " />
+                        <div class="card-body ">
+                            <h5 class="card-title border text-white text-uppercase ">Assignment help services</h5>
+                            <p class="card-text text-white text-justify ">
+                                Order Assignment help & Secure Highest Grades at a lowest price. We are a top website assisting students with online assignment writing.Our assignment writing services are 100% risk free and a 100% unique and plagiarism free
+                            </p>
+                            <a href="https://wa.me/254708729886?text=I%20am%20interested%20in%20buying%20the%20Assignment help services%20package " class="btn btn-block btn-outline-light ">ORDER NOW</a>
+                        </div>
+                    </div>
+                    <!-- Assignment help services -->
+                </div>
+                <div class="col ">
+                    <!-- Academic Writing Training -->
+                    <div class="card card-dark border ">
+                        <img src="https://images.pexels.com/photos/5775/calculator-scientific.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="card-img-top img-thumbnail border" id="services-img" alt=" " />
+                        <div class="card-body ">
+                            <h5 class="card-title border text-white text-uppercase ">Academic Writing Training</h5>
+                            <p class="card-text text-white text-justify ">
+                                We offer the only comprehensive academic writing training program in Kenya. We have made it affordable for anyone willing to acquire skills to help him/her make a legitimate living online through academic writing.
+                            </p>
+                            <a href="https://wa.me/254708729886?text=I%20am%20interested%20in%20buying%20the%20Assignment help services%20package " class="btn btn-block btn-outline-light ">ORDER NOW</a>
+                        </div>
+                    </div>
+                    <!-- Academic Writing Training -->
+                </div>
+                <div class="col ">
+                    <!-- VPN and VIP 72 Socks5 Proxy -->
+                    <div class="card card-dark border ">
+                        <img src="https://vpnpro.com/wp-content/uploads/VIP72-VPN.jpg" class="card-img-top img-thumbnail border" id="services-img" alt=" " />
+                        <div class="card-body ">
+                            <h5 class="card-title border text-white text-uppercase ">VPN and VIP 72 Socks5 Proxy</h5>
+                            <p class="card-text text-white text-justify ">
+                                Remote Desktop Protocol allows remote users to see and use Windows on a device in another location. We offer 12438 IP addresses in 128 countries, and they guarantee that their proxy and socks servers will completely hide your browsing activity.
+                            </p>
+                            <a href="https://wa.me/254708729886?text=I%20am%20interested%20in%20buying%20the%20VPN and VIP 72 Socks5 Proxy%20package " class="btn btn-block btn-outline-light ">ORDER NOW</a>
+                        </div>
+                    </div>
+                    <!-- VPN and VIP 72 Socks5 Proxy -->
+                </div>
+                <div class="col ">
+                    <!-- Academic Writing Websites -->
+                    <div class="card card-dark border ">
+                        <img src="https://images.pexels.com/photos/34600/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="card-img-top img-thumbnail border" id="services-img" alt=" " />
+                        <div class="card-body ">
+                            <h5 class="card-title border text-white text-uppercase ">Academic Writing Websites</h5>
+                            <p class="card-text text-white text-justify ">
+                                Get your own website and handle more clients on your own. We have partnered with professional web designers that will get you a search engine optimized website to get more of your target clients globally.
+                            </p>
+                            <a href="https://wa.me/254708729886?text=I%20am%20interested%20in%20buying%20the%20Academic Writing Websites%20package " class="btn btn-block btn-outline-light ">ORDER NOW</a>
+                        </div>
+                    </div>
+                    <!-- Academic Writing Websites -->
+                </div>
+                <div class="col ">
+                    <!-- Publication of journals/Thesis -->
+                    <div class="card card-dark border ">
+                        <img src="https://images.pexels.com/photos/267582/pexels-photo-267582.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="card-img-top img-thumbnail border" id="services-img" alt=" " />
+                        <div class="card-body ">
+                            <h5 class="card-title border text-white text-uppercase ">Publication of journals/Thesis</h5>
+                            <p class="card-text text-white text-justify ">
+                                Maximise your chances of getting published Whether you are a Ph.D. student or a senior researcher, time is a precious commodity. Publishing your research can involve several hurdles.
+                            </p>
+                            <a href="https://wa.me/254708729886?text=I%20am%20interested%20in%20buying%20the%20Publication of journals/Thesis%20package " class="btn btn-block btn-outline-light ">ORDER NOW</a>
+                        </div>
+                    </div>
+                    <!-- Publication of journals/Thesis -->
                 </div>
             </div>
-
         </div>
     </section>
     <!-- Content -->
     <!-- Footer Section -->
-    <section class="border-top">
+    <section class="border-top ">
         <!-- Footer -->
-        <footer class="bg-dark text-white text-center text-md-start">
+        <footer class="bg-dark text-white text-center text-md-start ">
             <!-- Grid container -->
-            <div class="container p-4">
+            <div class="container p-4 ">
                 <!--Grid row-->
-                <div class="row">
+                <div class="row ">
                     <!--Grid column-->
-                    <div class="col-lg-6 col-md-12 mb-4 mb-md-0 border-start">
-                        <h5 class="text-uppercase">MASHIMO</h5>
-                        <hr class="hr-light">
+                    <div class="col-lg-6 col-md-12 mb-4 mb-md-0 border-start ">
+                        <h5 class="text-uppercase ">MASHIMO</h5>
+                        <hr class="hr-light ">
                         <p>We are Mashimo, your one stop shop for the best household electronic items.</p>
                     </div>
                     <!--Grid column-->
 
                     <!--Grid column-->
-                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0 border-start">
-                        <h5 class="text-uppercase">Quick Links</h5>
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0 border-start ">
+                        <h5 class="text-uppercase ">Quick Links</h5>
                         <hr>
-                        <ul class="list-unstyled mb-0">
+                        <ul class="list-unstyled mb-0 ">
                             <li>
-                                <a href="index.html" class="text-white">HOME</a>
+                                <a href="index.html " class="text-white ">HOME</a>
                             </li>
                             <li>
-                                <a href="services.html" class="text-white">SERVICES</a>
+                                <a href="services.html " class="text-white">SERVICES</a>
                             </li>
                             <li>
-                                <a href="products.html" class="text-white">PRODUCTS</a>
+                                <a href="products.html " class="text-white ">PRODUCTS</a>
                             </li>
                             <li>
-                                <a href="terms.html" class="text-white">TERMS</a>
+                                <a href="terms.html " class="text-white ">TERMS</a>
                             </li>
                         </ul>
                     </div>
@@ -185,43 +422,43 @@
             <!-- Grid container -->
 
             <!-- Grid container -->
-            <div class="container text-center p-2 pb-0 border-top">
+            <div class="container text-center p-2 pb-0 border-top ">
                 <!-- Section: Social media -->
-                <section class="mb-4">
+                <section class="mb-4 ">
                     <!-- Facebook -->
-                    <a class="btn btn-outline-light btn-floating m-1" href="" role="button"><i
-                            class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-floating m-1 " href=" " role="button "><i
+                            class="fab fa-facebook-f "></i></a>
                     <!-- Twitter -->
-                    <a class="btn btn-outline-light btn-floating m-1" href="" role="button"><i
-                            class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-light btn-floating m-1 " href=" " role="button "><i
+                            class="fab fa-twitter "></i></a>
                     <!-- Google -->
-                    <a class="btn btn-outline-light btn-floating m-1" href="" role="button"><i
-                            class="fab fa-google"></i></a>
+                    <a class="btn btn-outline-light btn-floating m-1 " href=" " role="button "><i
+                            class="fab fa-google "></i></a>
                     <!-- Instagram -->
-                    <a class="btn btn-outline-light btn-floating m-1" href="" role="button"><i
-                            class="fab fa-instagram"></i></a>
+                    <a class="btn btn-outline-light btn-floating m-1 " href=" " role="button "><i
+                            class="fab fa-instagram "></i></a>
                     <!-- Whatsapp -->
-                    <a class="btn btn-outline-light btn-floating m-1" href="" role="button"><i
-                            class="fab fa-whatsapp"></i></a>
+                    <a class="btn btn-outline-light btn-floating m-1 " href=" " role="button "><i
+                            class="fab fa-whatsapp "></i></a>
                 </section>
                 <!-- Section: Social media -->
             </div>
             <!-- Grid container -->
 
             <!-- Copyright -->
-            <div class="text-center p-3 border-top" style="background-color: rgba(0, 0, 0, 0.2);">
+            <div class="text-center p-3 border-top " style="background-color: rgba(0, 0, 0, 0.2); ">
                 ©
                 <script>
                     document.write(new Date().getFullYear())
                 </script> Copyright:
-                <a class="text-white" href="https://mdbootstrap.com/">Mashimo.com</a>
+                <a class="text-white " href="https://mdbootstrap.com/ ">Mashimo.com</a>
             </div>
             <!-- Copyright -->
         </footer>
         <!-- Footer -->
     </section>
     <!-- Footer Section -->
-
+    <script src="js/mashimo.js"></script>
 </body>
 
 </html>
