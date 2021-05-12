@@ -20,17 +20,26 @@
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
     <style>
         #services-img {
-            height: 20rem;
+            height: 15rem;
         }
+
+        .gradient-custom {
+            /* fallback for old browsers */
+            background: #000505;
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: -webkit-linear-gradient(to right, rgba(0, 5, 5, 1), rgba(53, 88, 95, 1));
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            background: linear-gradient(to right, rgba(0, 5, 5, 1), rgba(53, 88, 95, 1))
+        }
+
         /* Small devices (landscape phones, 576px and up) */
-        
+
         @media (max-width: 576px) {
             header {
                 display: none;
             }
         }
     </style>
-    <!-- <script src="//code.jquery.com/jquery-1.11.1.min.js"></script> -->
 </head>
 
 <body>
@@ -57,7 +66,8 @@
     <nav class="navbar navbar-expand-md navbar-dark bg-dark border-bottom">
         <div class="container font-weight-bold">
             <a class="navbar-brand abs" href="index.html">MASHIMO</a>
-            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>
             <div class="navbar-collapse collapse" id="navbarNav">
@@ -85,13 +95,15 @@
         <div class="container p-3">
             <header class="pb-3">
                 <!-- Services image -->
-                <div class="p-5 text-center bg-image border" style="background-image: url('https://images.unsplash.com/photo-1436918898788-ebce04d38e46?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXwzMzYyMDU5fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60'); height: 400px;">
-                    <div class="mask" style="background-color: rgba(0, 0, 0, 0.8);">
-                        <div class="d-flex justify-content-center align-items-center h-100">
-                            <div class="text-white p-5">
-                                <h1 class="mb-3 border-bottom border-top">MASHIMO SERVICES</h1>
-                                <p class="lead font-weight-bold">We offer a wide variety of services ranging from online subscriptions to online payments. Feel free to select the service of your choice and get in touch</p>
-                            </div>
+                <div class="p-5 text-center border gradient-custom" style="height: 15rem;">
+                    <!-- <div class="mask" style=""> -->
+                    <div class="d-flex justify-content-center align-items-center h-100">
+                        <div class="text-white p-5">
+                            <h1 class="mb-3 border-bottom border-top">MASHIMO SERVICES</h1>
+                            <p class="lead font-weight-bold">We offer a wide variety of services ranging from online
+                                subscriptions to online payments. Feel free to select the service of your choice and get
+                                in touch</p>
+                            <!-- </div> -->
                         </div>
                     </div>
                 </div>
@@ -100,20 +112,24 @@
             <!-- Services -->
             <!-- Services Search -->
             <div class="input-group py-3 rounded">
-                <input type="search" class="form-control rounded bg-transparent text-white" id="myFilter" onkeyup="searchCardTitle()" placeholder="Search Services" />
+                <input type="search" class="form-control rounded bg-transparent text-white" id="myFilter"
+                    onkeyup="searchCardTitle()" placeholder="Search Services" />
             </div>
             <!-- Services Search -->
             <div class="row row-cols-1 row-cols-md-3 g-4" id="mashimo-services">
                 <div class="col">
                     <!-- Netflix -->
                     <div class="card card-dark border ">
-                        <img src="https://images.pexels.com/photos/987586/pexels-photo-987586.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="card-img-top img-thumbnail border" id="services-img" alt=" " />
+                        <img src="https://images.pexels.com/photos/987586/pexels-photo-987586.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                            class="card-img-top img-thumbnail border" id="services-img" alt=" " />
                         <div class="card-body ">
                             <h5 class="card-title border text-white ">NETFLIX</h5>
-                            <p class="card-text text-white text-justify ">
-                                Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.
+                            <p class="card-text text-white text-justify">
+                                Netflix is a streaming service that offers a wide variety of award-winning TV shows,
+                                movies, anime, documentaries, and more on thousands of internet-connected devices.
                             </p>
-                            <a href="https://wa.me/254708729886?text=I%20am%20interested%20in%20buying%20the%20netflix%20package " class="btn btn-block btn-outline-light ">ORDER NOW</a>
+                            <a href="https://wa.me/254708729886?text=I%20am%20interested%20in%20buying%20the%20netflix%20package"
+                                class="btn btn-block btn-outline-light ">ORDER NOW</a>
                         </div>
                     </div>
                     <!-- Netflix -->
@@ -121,13 +137,17 @@
                 <div class="col">
                     <!-- Grammarly -->
                     <div class="card card-dark border">
-                        <img src="https://bigdata-madesimple.com/wp-content/uploads/2018/12/Grammarly.jpg " class="card-img-top img-thumbnail border" id="services-img" alt=" " />
+                        <img src="https://bigdata-madesimple.com/wp-content/uploads/2018/12/Grammarly.jpg "
+                            class="card-img-top img-thumbnail border" id="services-img" alt=" " />
                         <div class="card-body">
                             <h5 class="card-title border text-white">GRAMMARLY</h5>
                             <p class="card-text text-white text-justify">
-                                Millions trust Grammarly’s writing app to make their online writing clear and effective.It is a writing tool that helps you check for several types of errors.With as low as $3 you get a premium Grammarly account
+                                Millions trust Grammarly’s writing app to make their online writing clear and
+                                effective.It is a writing tool that helps you check for several types of errors.With as
+                                low as $3 you get a premium Grammarly account
                             </p>
-                            <a href="https://wa.me/254708729886?text=I%20am%20interested%20in%20buying%20the%20grammarly%20package" class="btn btn-block btn-outline-light">ORDER NOW</a>
+                            <a href="https://wa.me/254708729886?text=I%20am%20interested%20in%20buying%20the%20grammarly%20package"
+                                class="btn btn-block btn-outline-light">ORDER NOW</a>
                         </div>
                     </div>
                     <!-- Grammarly -->
@@ -135,13 +155,17 @@
                 <div class="col">
                     <!-- Upwork -->
                     <div class="card card-dark border ">
-                        <img src="https://www.upwork.com/static/images/upwork-fb.png " class="card-img-top img-thumbnail border" id="services-img" alt=" " />
+                        <img src="https://www.upwork.com/static/images/upwork-fb.png "
+                            class="card-img-top img-thumbnail border" id="services-img" alt=" " />
                         <div class="card-body ">
                             <h5 class="card-title border text-white ">UPWORK ACCOUNTS</h5>
-                            <p class="card-text text-white text-justify ">
-                                Upwork is one of the leading online work place. We offer new and approved Upwork accounts at an affordable price. Getting a productive account all by yourself can be complicated.
+                            <p class="card-text text-white text-justify">
+                                Upwork is one of the leading online work place. We offer new and approved Upwork
+                                accounts at an affordable price. Getting a productive account all by yourself can be
+                                complicated.
                             </p>
-                            <a href="https://wa.me/254708729886?text=I%20am%20interested%20in%20buying%20the%20upwork%20package " class="btn btn-block btn-outline-light ">ORDER NOW</a>
+                            <a href="https://wa.me/254708729886?text=I%20am%20interested%20in%20buying%20the%20upwork%20package "
+                                class="btn btn-block btn-outline-light ">ORDER NOW</a>
                         </div>
                     </div>
                     <!-- Upwork -->
@@ -149,14 +173,18 @@
                 <div class="col">
                     <!-- Nord Vpn -->
                     <div class="card card-dark border ">
-                        <img src="https://images.unsplash.com/photo-1603985529862-9e12198c9a60?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1342&q=80" class="card-img-top img-thumbnail border" id="services-img" alt=" " />
+                        <img src="https://images.unsplash.com/photo-1603985529862-9e12198c9a60?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1342&q=80"
+                            class="card-img-top img-thumbnail border" id="services-img" alt=" " />
                         <div class="card-body ">
                             <h5 class="card-title border text-white text-uppercase ">Nord and Tunnel Bear VPN Logins
                             </h5>
                             <p class="card-text text-white text-justify ">
-                                NordVPN offers dedicated IP addresses and has advanced leak protection, whereas TunnelBear only offers shared IPs. If you are squeezed by your budget, yet in need of the subscriptions.
+                                NordVPN offers dedicated IP addresses and has advanced leak protection, whereas
+                                TunnelBear only offers shared IPs. If you are squeezed by your budget, yet in need of
+                                the subscriptions.
                             </p>
-                            <a href="https://wa.me/254708729886?text=I%20am%20interested%20in%20buying%20the%20vpn%20package " class="btn btn-block btn-outline-light ">ORDER NOW</a>
+                            <a href="https://wa.me/254708729886?text=I%20am%20interested%20in%20buying%20the%20vpn%20package "
+                                class="btn btn-block btn-outline-light ">ORDER NOW</a>
                         </div>
                     </div>
                     <!-- Nord Vpn -->
@@ -170,9 +198,11 @@
                             <h5 class="card-title border text-white text-uppercase ">BULK SMS
                             </h5>
                             <p class="card-text text-white text-justify ">
-                                In any kind of business you need to reach more prospects. Just a click on your keyboard you can now send a SMS text message to thousands of your potential clients.
+                                In any kind of business you need to reach more prospects. Just a click on your keyboard
+                                you can now send a SMS text message to thousands of your potential clients.
                             </p>
-                            <a href="https://wa.me/254708729886?text=I%20am%20interested%20in%20buying%20the%20Bulk SMS%20package " class="btn btn-block btn-outline-light ">ORDER NOW</a>
+                            <a href="https://wa.me/254708729886?text=I%20am%20interested%20in%20buying%20the%20Bulk SMS%20package "
+                                class="btn btn-block btn-outline-light ">ORDER NOW</a>
                         </div>
                     </div>
                     <!-- BULK SMS -->
@@ -185,9 +215,12 @@
                         <div class="card-body ">
                             <h5 class="card-title border text-white text-uppercase ">Chegg Unlocks</h5>
                             <p class="card-text text-white text-justify ">
-                                Everything is figureoutable with Chegg. Chegg offers you with Textbook Solutions, Expert Q&A, Video Explanations and Practice Problems. We offer you Chegg unlocks at a discounted price.
+                                Everything is figureoutable with Chegg. Chegg offers you with Textbook Solutions, Expert
+                                Q&A, Video Explanations and Practice Problems. We offer you Chegg unlocks at a
+                                discounted price.
                             </p>
-                            <a href="https://wa.me/254708729886?text=I%20am%20interested%20in%20buying%20the%Chegg Unlocks%20package " class="btn btn-block btn-outline-light ">ORDER NOW</a>
+                            <a href="https://wa.me/254708729886?text=I%20am%20interested%20in%20buying%20the%Chegg Unlocks%20package "
+                                class="btn btn-block btn-outline-light ">ORDER NOW</a>
                         </div>
                     </div>
                     <!-- CHEGG -->
@@ -195,13 +228,17 @@
                 <div class="col">
                     <!-- Plagiarism Removal Services -->
                     <div class="card card-dark border ">
-                        <img src="https://5.imimg.com/data5/SELLER/Default/2021/4/IH/LJ/VE/4371101/capture-jpg-500x500.JPG " class="card-img-top img-thumbnail border" id="services-img" alt=" " />
+                        <img src="https://5.imimg.com/data5/SELLER/Default/2021/4/IH/LJ/VE/4371101/capture-jpg-500x500.JPG "
+                            class="card-img-top img-thumbnail border" id="services-img" alt=" " />
                         <div class="card-body ">
                             <h5 class="card-title border text-white text-uppercase ">Plagiarism Removal Services</h5>
                             <p class="card-text text-white text-justify ">
-                                Get advanced plagiarism removal services. With our paraphrasing tools ,we change the sentences and remain with the same best meaning. Whatever the level,you do not have to worry about plagiarism.
+                                Get advanced plagiarism removal services. With our paraphrasing tools ,we change the
+                                sentences and remain with the same best meaning. Whatever the level,you do not have to
+                                worry about plagiarism.
                             </p>
-                            <a href="https://wa.me/254708729886?text=I%20am%20interested%20in%20buying%20the%Plagiarism Removal Services%20package " class="btn btn-block btn-outline-light ">ORDER NOW</a>
+                            <a href="https://wa.me/254708729886?text=I%20am%20interested%20in%20buying%20the%Plagiarism Removal Services%20package "
+                                class="btn btn-block btn-outline-light ">ORDER NOW</a>
                         </div>
                     </div>
                     <!-- Plagiarism Removal Services -->
@@ -209,13 +246,17 @@
                 <div class="col">
                     <!-- Rev and Verbit -->
                     <div class="card card-dark border ">
-                        <img src="https://www.rev.com/blog/wp-content/uploads/2019/02/Rev-revVSTranscribeme.gif" class="card-img-top img-thumbnail border" id="services-img" alt=" " />
+                        <img src="https://www.rev.com/blog/wp-content/uploads/2019/02/Rev-revVSTranscribeme.gif"
+                            class="card-img-top img-thumbnail border" id="services-img" alt=" " />
                         <div class="card-body ">
                             <h5 class="card-title border text-white text-uppercase ">Rev and Verbit</h5>
                             <p class="card-text text-white text-justify ">
-                                Do you need a perfect tool to professionally transcribe all English audio to text. Rev and Verbit are the very solution whatever audio you have and also earn through transcription tasks.
+                                Do you need a perfect tool to professionally transcribe all English audio to text. Rev
+                                and Verbit are the very solution whatever audio you have and also earn through
+                                transcription tasks.
                             </p>
-                            <a href="https://wa.me/254708729886?text=I%20am%20interested%20in%20buying%20the%20Rev and Verbit%20package " class="btn btn-block btn-outline-light ">ORDER NOW</a>
+                            <a href="https://wa.me/254708729886?text=I%20am%20interested%20in%20buying%20the%20Rev and Verbit%20package "
+                                class="btn btn-block btn-outline-light ">ORDER NOW</a>
                         </div>
                     </div>
                     <!-- Rev and Verbit -->
@@ -228,9 +269,12 @@
                         <div class="card-body ">
                             <h5 class="card-title border text-white text-uppercase ">EBSCOhost</h5>
                             <p class="card-text text-white text-justify ">
-                                EBSCOhost is an intuitive online research platform used by thousands of institutions and millions of users worldwide. With EBSCOhost,you get all kind of information you need as a researcher
+                                EBSCOhost is an intuitive online research platform used by thousands of institutions and
+                                millions of users worldwide. With EBSCOhost,you get all kind of information you need as
+                                a researcher
                             </p>
-                            <a href="https://wa.me/254708729886?text=I%20am%20interested%20in%20buying%20the%20EBSCOhost%20package " class="btn btn-block btn-outline-light ">ORDER NOW</a>
+                            <a href="https://wa.me/254708729886?text=I%20am%20interested%20in%20buying%20the%20EBSCOhost%20package "
+                                class="btn btn-block btn-outline-light ">ORDER NOW</a>
                         </div>
                     </div>
                     <!-- EBSCOhost -->
@@ -238,13 +282,16 @@
                 <div class="col">
                     <!-- Turn It In -->
                     <div class="card card-dark border ">
-                        <img src="https://www.turnitin.com/img/themes/turnitin/img/default-turnitin-image.png?s=ea83de6244b33b609b2c7232765c38b3" class="card-img-top img-thumbnail border" id="services-img" alt=" " />
+                        <img src="https://www.turnitin.com/img/themes/turnitin/img/default-turnitin-image.png?s=ea83de6244b33b609b2c7232765c38b3"
+                            class="card-img-top img-thumbnail border" id="services-img" alt=" " />
                         <div class="card-body ">
                             <h5 class="card-title border text-white text-uppercase ">Turn It In</h5>
                             <p class="card-text text-white text-justify ">
-                                In any kind of business you need to reach more prospects. Just a click on your keyboard you can now send a SMS text message to thousands of your potential clients.
+                                In any kind of business you need to reach more prospects. Just a click on your keyboard
+                                you can now send a SMS text message to thousands of your potential clients.
                             </p>
-                            <a href="https://wa.me/254708729886?text=I%20am%20interested%20in%20buying%20the%20Bulk SMS%20package " class="btn btn-block btn-outline-light ">ORDER NOW</a>
+                            <a href="https://wa.me/254708729886?text=I%20am%20interested%20in%20buying%20the%20Bulk SMS%20package "
+                                class="btn btn-block btn-outline-light ">ORDER NOW</a>
                         </div>
                     </div>
                     <!-- Turn It In -->
@@ -252,13 +299,17 @@
                 <div class="col">
                     <!-- Writing services -->
                     <div class="card card-dark border ">
-                        <img src="https://images.pexels.com/photos/955389/pexels-photo-955389.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="card-img-top img-thumbnail border" id="services-img" alt=" " />
+                        <img src="https://images.pexels.com/photos/955389/pexels-photo-955389.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                            class="card-img-top img-thumbnail border" id="services-img" alt=" " />
                         <div class="card-body ">
                             <h5 class="card-title border text-white text-uppercase ">Writing services</h5>
                             <p class="card-text text-white text-justify ">
-                                We offer writing services. Ranging from masters, PhD, Thesis, Proposals to Dissertation writing services. We have experienced writers. When it comes to writing you can count on us, we surely render quality.
+                                We offer writing services. Ranging from masters, PhD, Thesis, Proposals to Dissertation
+                                writing services. We have experienced writers. When it comes to writing you can count on
+                                us, we surely render quality.
                             </p>
-                            <a href="https://wa.me/254708729886?text=I%20am%20interested%20in%20buying%20the%20Writing services%20package " class="btn btn-block btn-outline-light ">ORDER NOW</a>
+                            <a href="https://wa.me/254708729886?text=I%20am%20interested%20in%20buying%20the%20Writing services%20package "
+                                class="btn btn-block btn-outline-light ">ORDER NOW</a>
                         </div>
                     </div>
                     <!-- Writing services -->
@@ -271,9 +322,12 @@
                         <div class="card-body ">
                             <h5 class="card-title border text-white text-uppercase ">Course Hero Logins</h5>
                             <p class="card-text text-white text-justify ">
-                                Want to earn from online writing? We are here to equip you with the necessary and legitimate tools to help you earn online. With course hero you are able to access writing resources easily i.e expert tutors,explanations and answers.
+                                Want to earn from online writing? We are here to equip you with the necessary and
+                                legitimate tools to help you earn online. With course hero you are able to access
+                                writing resources easily i.e expert tutors,explanations and answers.
                             </p>
-                            <a href="https://wa.me/254708729886?text=I%20am%20interested%20in%20buying%20the%20Course Hero Logins%20package " class="btn btn-block btn-outline-light ">ORDER NOW</a>
+                            <a href="https://wa.me/254708729886?text=I%20am%20interested%20in%20buying%20the%20Course Hero Logins%20package "
+                                class="btn btn-block btn-outline-light ">ORDER NOW</a>
                         </div>
                     </div>
                     <!-- Course Hero Logins -->
@@ -281,13 +335,17 @@
                 <div class="col">
                     <!-- PayPal Verification Documents -->
                     <div class="card card-dark border ">
-                        <img src="https://urbankenyans.com/wp-content/uploads/2020/08/PayPal-Kenya.jpg" class="card-img-top img-thumbnail border" id="services-img" alt=" " />
+                        <img src="https://urbankenyans.com/wp-content/uploads/2020/08/PayPal-Kenya.jpg"
+                            class="card-img-top img-thumbnail border" id="services-img" alt=" " />
                         <div class="card-body ">
                             <h5 class="card-title border text-white text-uppercase ">PayPal Verification Documents</h5>
                             <p class="card-text text-white text-justify ">
-                                You need to get your identity approved for a PayPal account so as to transact huge money. We get everything ready for you so that you can start receiving your payments as soon as possible.
+                                You need to get your identity approved for a PayPal account so as to transact huge
+                                money. We get everything ready for you so that you can start receiving your payments as
+                                soon as possible.
                             </p>
-                            <a href="https://wa.me/254708729886?text=I%20am%20interested%20in%20buying%20the%20PayPal Verification Documents%20package " class="btn btn-block btn-outline-light ">ORDER NOW</a>
+                            <a href="https://wa.me/254708729886?text=I%20am%20interested%20in%20buying%20the%20PayPal Verification Documents%20package "
+                                class="btn btn-block btn-outline-light ">ORDER NOW</a>
                         </div>
                     </div>
                     <!-- PayPal Verification Documents -->
@@ -295,13 +353,17 @@
                 <div class="col">
                     <!-- Quillbot paraphrasing tool -->
                     <div class="card card-dark border ">
-                        <img src="https://quillbot.com/images/og_quillbot.png" class="card-img-top img-thumbnail border" id="services-img" alt=" " />
+                        <img src="https://quillbot.com/images/og_quillbot.png" class="card-img-top img-thumbnail border"
+                            id="services-img" alt=" " />
                         <div class="card-body ">
                             <h5 class="card-title border text-white text-uppercase ">Quillbot paraphrasing tool</h5>
                             <p class="card-text text-white text-justify ">
-                                Millions trust QuillBot’s full-sentence thesaurus to get creative suggestions, rewrite content, and get over writer’s block. We offer the tool at $50 per year or $30 for six months. Ease writing with Quillbot.
+                                Millions trust QuillBot’s full-sentence thesaurus to get creative suggestions, rewrite
+                                content, and get over writer’s block. We offer the tool at $50 per year or $30 for six
+                                months. Ease writing with Quillbot.
                             </p>
-                            <a href="https://wa.me/254708729886?text=I%20am%20interested%20in%20buying%20the%20Quillbot paraphrasing tool%20package " class="btn btn-block btn-outline-light ">ORDER NOW</a>
+                            <a href="https://wa.me/254708729886?text=I%20am%20interested%20in%20buying%20the%20Quillbot paraphrasing tool%20package "
+                                class="btn btn-block btn-outline-light ">ORDER NOW</a>
                         </div>
                     </div>
                     <!-- Quillbot paraphrasing tool -->
@@ -309,13 +371,17 @@
                 <div class="col ">
                     <!-- Assignment help services -->
                     <div class="card card-dark border ">
-                        <img src="https://images.pexels.com/photos/5905848/pexels-photo-5905848.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="card-img-top img-thumbnail border" id="services-img" alt=" " />
+                        <img src="https://images.pexels.com/photos/5905848/pexels-photo-5905848.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                            class="card-img-top img-thumbnail border" id="services-img" alt=" " />
                         <div class="card-body ">
                             <h5 class="card-title border text-white text-uppercase ">Assignment help services</h5>
                             <p class="card-text text-white text-justify ">
-                                Order Assignment help & Secure Highest Grades at a lowest price. We are a top website assisting students with online assignment writing.Our assignment writing services are 100% risk free and a 100% unique and plagiarism free
+                                Order Assignment help & Secure Highest Grades at a lowest price. We are a top website
+                                assisting students with online assignment writing.Our assignment writing services are
+                                100% risk free and a 100% unique and plagiarism free
                             </p>
-                            <a href="https://wa.me/254708729886?text=I%20am%20interested%20in%20buying%20the%20Assignment help services%20package " class="btn btn-block btn-outline-light ">ORDER NOW</a>
+                            <a href="https://wa.me/254708729886?text=I%20am%20interested%20in%20buying%20the%20Assignment help services%20package "
+                                class="btn btn-block btn-outline-light ">ORDER NOW</a>
                         </div>
                     </div>
                     <!-- Assignment help services -->
@@ -323,13 +389,17 @@
                 <div class="col ">
                     <!-- Academic Writing Training -->
                     <div class="card card-dark border ">
-                        <img src="https://images.pexels.com/photos/5775/calculator-scientific.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="card-img-top img-thumbnail border" id="services-img" alt=" " />
+                        <img src="https://images.pexels.com/photos/5775/calculator-scientific.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                            class="card-img-top img-thumbnail border" id="services-img" alt=" " />
                         <div class="card-body ">
                             <h5 class="card-title border text-white text-uppercase ">Academic Writing Training</h5>
                             <p class="card-text text-white text-justify ">
-                                We offer the only comprehensive academic writing training program in Kenya. We have made it affordable for anyone willing to acquire skills to help him/her make a legitimate living online through academic writing.
+                                We offer the only comprehensive academic writing training program in Kenya. We have made
+                                it affordable for anyone willing to acquire skills to help him/her make a legitimate
+                                living online through academic writing.
                             </p>
-                            <a href="https://wa.me/254708729886?text=I%20am%20interested%20in%20buying%20the%20Assignment help services%20package " class="btn btn-block btn-outline-light ">ORDER NOW</a>
+                            <a href="https://wa.me/254708729886?text=I%20am%20interested%20in%20buying%20the%20Assignment help services%20package "
+                                class="btn btn-block btn-outline-light ">ORDER NOW</a>
                         </div>
                     </div>
                     <!-- Academic Writing Training -->
@@ -337,13 +407,17 @@
                 <div class="col ">
                     <!-- VPN and VIP 72 Socks5 Proxy -->
                     <div class="card card-dark border ">
-                        <img src="https://vpnpro.com/wp-content/uploads/VIP72-VPN.jpg" class="card-img-top img-thumbnail border" id="services-img" alt=" " />
+                        <img src="https://vpnpro.com/wp-content/uploads/VIP72-VPN.jpg"
+                            class="card-img-top img-thumbnail border" id="services-img" alt=" " />
                         <div class="card-body ">
                             <h5 class="card-title border text-white text-uppercase ">VPN and VIP 72 Socks5 Proxy</h5>
                             <p class="card-text text-white text-justify ">
-                                Remote Desktop Protocol allows remote users to see and use Windows on a device in another location. We offer 12438 IP addresses in 128 countries, and they guarantee that their proxy and socks servers will completely hide your browsing activity.
+                                Remote Desktop Protocol allows remote users to see and use Windows on a device in
+                                another location. We offer 12438 IP addresses in 128 countries, and they guarantee that
+                                their proxy and socks servers will completely hide your browsing activity.
                             </p>
-                            <a href="https://wa.me/254708729886?text=I%20am%20interested%20in%20buying%20the%20VPN and VIP 72 Socks5 Proxy%20package " class="btn btn-block btn-outline-light ">ORDER NOW</a>
+                            <a href="https://wa.me/254708729886?text=I%20am%20interested%20in%20buying%20the%20VPN and VIP 72 Socks5 Proxy%20package "
+                                class="btn btn-block btn-outline-light ">ORDER NOW</a>
                         </div>
                     </div>
                     <!-- VPN and VIP 72 Socks5 Proxy -->
@@ -351,13 +425,17 @@
                 <div class="col ">
                     <!-- Academic Writing Websites -->
                     <div class="card card-dark border ">
-                        <img src="https://images.pexels.com/photos/34600/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="card-img-top img-thumbnail border" id="services-img" alt=" " />
+                        <img src="https://images.pexels.com/photos/34600/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                            class="card-img-top img-thumbnail border" id="services-img" alt=" " />
                         <div class="card-body ">
                             <h5 class="card-title border text-white text-uppercase ">Academic Writing Websites</h5>
                             <p class="card-text text-white text-justify ">
-                                Get your own website and handle more clients on your own. We have partnered with professional web designers that will get you a search engine optimized website to get more of your target clients globally.
+                                Get your own website and handle more clients on your own. We have partnered with
+                                professional web designers that will get you a search engine optimized website to get
+                                more of your target clients globally.
                             </p>
-                            <a href="https://wa.me/254708729886?text=I%20am%20interested%20in%20buying%20the%20Academic Writing Websites%20package " class="btn btn-block btn-outline-light ">ORDER NOW</a>
+                            <a href="https://wa.me/254708729886?text=I%20am%20interested%20in%20buying%20the%20Academic Writing Websites%20package "
+                                class="btn btn-block btn-outline-light ">ORDER NOW</a>
                         </div>
                     </div>
                     <!-- Academic Writing Websites -->
@@ -365,16 +443,39 @@
                 <div class="col ">
                     <!-- Publication of journals/Thesis -->
                     <div class="card card-dark border ">
-                        <img src="https://images.pexels.com/photos/267582/pexels-photo-267582.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="card-img-top img-thumbnail border" id="services-img" alt=" " />
+                        <img src="https://images.pexels.com/photos/267582/pexels-photo-267582.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                            class="card-img-top img-thumbnail border" id="services-img" alt=" " />
                         <div class="card-body ">
                             <h5 class="card-title border text-white text-uppercase ">Publication of journals/Thesis</h5>
                             <p class="card-text text-white text-justify ">
-                                Maximise your chances of getting published Whether you are a Ph.D. student or a senior researcher, time is a precious commodity. Publishing your research can involve several hurdles.
+                                Maximise your chances of getting published Whether you are a Ph.D. student or a senior
+                                researcher, time is a precious commodity. Publishing your research can involve several
+                                hurdles.
                             </p>
-                            <a href="https://wa.me/254708729886?text=I%20am%20interested%20in%20buying%20the%20Publication of journals/Thesis%20package " class="btn btn-block btn-outline-light ">ORDER NOW</a>
+                            <a href="https://wa.me/254708729886?text=I%20am%20interested%20in%20buying%20the%20Publication of journals/Thesis%20package "
+                                class="btn btn-block btn-outline-light ">ORDER NOW</a>
                         </div>
                     </div>
                     <!-- Publication of journals/Thesis -->
+                </div>
+                <div class="col ">
+                    <!-- Social Media Management and Marketing. -->
+                    <div class="card card-dark border ">
+                        <img src="img/services/socialmedia.jpeg" class="card-img-top img-thumbnail border"
+                            id="services-img" alt=" " />
+                        <div class="card-body ">
+                            <h5 class="card-title border text-white text-uppercase ">Social Media Management &
+                                Marketing.</h5>
+                            <p class="card-text text-white text-justify ">We provide first class services and enable you
+                                our client to directly connect to your potential customers and clients.
+                                We manage your social media handles by regularly posting and running ads for your
+                                business.
+                            </p>
+                            <a href="https://wa.me/254708729886?text=I%20am%20interested%20in%20buying%20the%20Social Media Management and Marketing%20package "
+                                class="btn btn-block btn-outline-light ">ORDER NOW</a>
+                        </div>
+                    </div>
+                    <!-- Social Media Management and Marketing. -->
                 </div>
             </div>
         </div>
@@ -405,7 +506,7 @@
                                 <a href="index.html " class="text-white ">HOME</a>
                             </li>
                             <li>
-                                <a href="services.html " class="text-white">SERVICES</a>
+                                <a href="services.html " class="text-white fw-bold">SERVICES</a>
                             </li>
                             <li>
                                 <a href="products.html " class="text-white ">PRODUCTS</a>
@@ -454,6 +555,12 @@
                 <a class="text-white " href="https://mdbootstrap.com/ ">Mashimo.com</a>
             </div>
             <!-- Copyright -->
+            <!-- Developer -->
+            <div class="text-center p-2 border-top" style="background-color:black;">
+                <a class="text-white fw-bold fst-italic" href="https://github.com/okellojohnsilas">DEVELOPER
+                </a>
+            </div>
+            <!-- Developer -->
         </footer>
         <!-- Footer -->
     </section>
